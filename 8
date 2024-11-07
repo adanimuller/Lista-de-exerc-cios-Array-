@@ -1,0 +1,19 @@
+/*
+Ana está organizando suas tarefas de limpeza semanal. Crie um array inicialmente vazio chamado tarefasLimpeza. 
+Solicite a Ana para adicionar quatro tarefas à lista. Remova a terceira tarefa da lista e, em seguida,
+mude a segunda tarefa para "limpar banheiro". Imprima a lista de tarefas de limpeza atualizada no final.
+*/
+
+let tarefasLimpeza = [];
+function adicionarTarefa(tarefa) {
+    tarefasLimpeza.push(tarefa);
+}
+for (let i = 0; i < 4; i++) {
+    let tarefa = prompt("Digite uma tarefa de limpeza:");
+    adicionarTarefa(tarefa);
+}
+tarefasLimpeza.splice(2, 1);
+if (tarefasLimpeza.length > 1) {
+    tarefasLimpeza[1] = "limpar banheiro";
+}
+console.log("Lista de tarefas de limpeza atualizada:", tarefasLimpeza);
